@@ -1,0 +1,20 @@
+{
+  "name": "deezify",
+  "version": "1.0.0",
+  "description": "Deezify listening service",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Cédric Plantet",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "ip": "^1.1.5",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

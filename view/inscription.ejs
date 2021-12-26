@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name= "viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+        <title>Deezify - Inscription</title>
+        <link rel="stylesheet" type="text/css" href="CSS/SubscriptionStyle.css">
+        <link rel="icon" type="image/png" href="res/img/deezify.png" />
+        <script type="text/javascript" src="JS/ScriptInscription.js"></script>
+    </head>
+
+    <body>
+    	<header>
+    	
+    		<div id="presentation">
+    			<a href='connection'><img id="Logo" src="res/img/deezify.png" alt="Logo Deezify"></a>
+    			<p id="slogan" >Because music gives rhythm to your life</p>
+    		</div>
+    		
+    		<div id="boutons">
+    			<a href="connection"><button id="connexion" name="Connexion">Connexion</button></a>
+    			<a href="inscription"><button id="inscription" name="Inscription">Inscription</button></a>
+    		</div>
+    		
+    			
+    	</header>
+    
+    	<div id="main">
+    	
+    		
+    		<form action="" method="POST" id="formulaire">
+  				
+  				<h1>Vivez l'instant, arrêtez le temps !</h1>
+  				
+  				<div class="radio-toolbar">
+  				
+  					<input type ="radio" id="madame" name="civil" value="Mme" required/>
+				    <label for="madame">Madame</label>
+				
+				    <input type ="radio" id="monsieur" name="civil" value="Mr" required/>
+				    <label for="monsieur">Monsieur</label>
+				
+				    <input type ="radio" id="rien" name="civil" value="None" required/>
+				    <label for="rien">Non précisé</label> 
+		    	 
+		    	</div>
+		    	
+		    	
+		    	<input type="text" id="nom" name="nom" placeholder="Nom" required>
+		    	<input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+		    	<input type="date" id="birth" name="birth" placeholder="Date de naissance" style="color:black">
+		    	<input type="text" id="mail" name="mail" placeholder="Adresse e-mail" required>
+		    	<input type="text" id="password" name="password" placeholder="Mot de passe" onfocus="focusHint(this)" onblur="blurHint(this)" required>
+		    	<input type="text" id="password" name="passwordVerif" placeholder="Confirmation du mot de passe" onfocus="focusHint(this)" onblur="blurHint(this)" required>
+		    	
+		    	
+		    	<input type="text" id="address" name="address" placeholder="Adresse de facturation" required>
+		    	
+		    	<select name="style" id="style-select" required>
+				   	<option value="">--Votre style de musique préféré--</option>
+				    <option value="house">House</option>
+				    <option value="pop">Pop</option>
+				    <option value="metal">Métal</option>
+				    <option value="classique">Classique</option>
+				    <option value="jazz">Jazz</option>
+				</select>
+  
+  				 <input id="inscrire" type="submit" value="S'inscrire" onsubmit="verif(password.value,passwordVerif.value)">
+  				 
+  				 <c:if test="${ !empty form }"><p id="erreur"> <c:out value="${ form }"></c:out></p></c:if>
+ 
+			</form>
+    	
+	    	
+	    	<canvas id="image" width="1500" height="1295">
+	    	</canvas>
+	    	
+	    		<div style="display:none;">
+	    			<img id="photo" src="res/img/photo1.jpg" alt="" onload="image(this)">
+	    			
+	    		</div>
+	    		
+	    	
+    	</div>
+        
+        
+        <footer>
+        	
+        	<div id="Reseaux">
+        		<img id="Facebook" src="res/img/fb.png" alt="Facebook Deezify">
+        		<img id="Twitter" src="res/img/twitter.png" alt="Twitter Deezify">
+        	</div>
+        	
+        	<div id="Copyrights">
+        		<p>©Deezify</p>
+        	</div>
+    	</footer>
+    </body>
+</html>
